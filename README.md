@@ -58,9 +58,12 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 echo "# astro_v1" >> README.md
-  git init
-  git add README.md
-  git commit -m "first commit"
-  git branch -M main
-  git remote add origin https://github.com/jofe12/astro_v1.git
+  git init                     // inicializa git
+  git add .                    // adiciona los archivos 
+  git commit -m "first commit" // crea el primer commit
+  git branch -M main           // cambia de rama master a rama main
+  git remote add origin https://github.com/jofe12/astro_v1.git 
   git push -u origin main
+
+git branch                     // lista las ramas creadas
+git checkout "nombre rama"      // cambia de rama
