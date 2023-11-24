@@ -73,7 +73,9 @@ echo "# astro_v1" >> README.md
   git remote add origin https://github.com/jofe12/astro_v1.git 
   git push -u origin main
 
+////////////////////////////////////////////////////////////////////////////////////
 git branch                     // lista las ramas creadas
+
 git checkout "nombre rama"      // cambia de rama
 
 git checkout -b "nombre de la rama"  //crea una nueva rama y se ubica en ella.
