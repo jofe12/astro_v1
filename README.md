@@ -85,3 +85,6 @@ git merge "nombre de la rama a fusionar"    // este comando sirve para fusionar 
 
 
 git branch -d "nombre de la rama"           // este comando sirve para borrar una rama.
+
+
+git push                                      // permite enváir los cambias en los archivos al repositorio en github.
