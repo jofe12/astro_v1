@@ -80,3 +80,5 @@ git checkout -b "nombre de la rama"  //crea una nueva rama y se ubica en ella.
 
 git status                  //muestra el estado del archivo modificado, seguido se debe hacer un git add . y despues el commit
 >>>>>>> panel-v1.1
+
+git merge "nombre de la rama a fusionar"    // este comando sirve para fusionar dos ramas, pero se debe estar ubicado en la rama principal,     la                                            cual es la que va a recibir la rama secundaria
