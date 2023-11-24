@@ -90,3 +90,6 @@ git branch -d "nombre de la rama"           // este comando sirve para borrar un
 
 
 git push                                      // permite enváir los cambias en los archivos al repositorio en github.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
