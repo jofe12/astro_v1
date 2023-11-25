@@ -73,6 +73,8 @@ echo "# astro_v1" >> README.md
   git remote add origin https://github.com/jofe12/astro_v1.git 
   git push -u origin main
 
+  tree commit main
+
 ////////////////////////////////////////////////////////////////////////////////////
 git branch                     // lista las ramas creadas
 
