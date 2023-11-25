@@ -36,11 +36,16 @@ body{
 
 .sidebar{
     position: absolute;
-    width: 300px;
+    width: 80px;
     height: 100vh;
     background: var(--bgsb);
     transition: 0.5s;
     padding-left: 10px;
+    overflow: hidden;
+}
+
+.sidebar.active{
+    width: 300px;
 }
 
 .sidebar ul{
@@ -52,6 +57,38 @@ body{
 .sidebar ul  li{
     position: relative;
    list-style: none;
+}
+
+.sidebar ul  li.active{
+    background: var(--crl);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.sidebar ul  li.active::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    box-shadow: 5px 5px 0 5px var(--crl);
+    border-bottom-right-radius: 20px;
+    background: transparent;
+    
+}
+
+.sidebar ul  li.active::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    box-shadow: 5px -5px 0 5px var(--crl);
+    border-top-right-radius: 20px;
+    background: transparent;
+    
 }
 
 .sidebar ul  li.logo{
@@ -69,13 +106,13 @@ body{
     color: var(--crl);
 }
 
-.sidebar ul  li a{
+.sidebar ul li a{
 position: relative;
 display: flex;
 white-space: nowrap;
 text-decoration: none;
 }
-.sidebar ul  li a .icon{
+.sidebar ul li a .icon{
     position: relative;
     display: flex;
     justify-content: center;
@@ -102,18 +139,36 @@ text-decoration: none;
         transition: 0.5s;
         }
 
-        .sidebar ul  li:hover a .icon,
-        .sidebar ul  li:hover a .text{
-            color: var(--bg);
-        }
+.sidebar ul li.active a .icon{
+color:var(--bgsb);
+z-index: #fff;
+}
 
-        .bottom{
-            position: relative; 
-            bottom: 0;
-            width: 100%;
-        }
+.sidebar ul li.active a .text{
+color:#fff;
+}
 
-        .imgbx{
+.sidebar ul  li:hover a .icon,
+.sidebar ul  li:hover a .text{
+        color: var(--bg);
+ }
+
+ .sidebar ul li.active a .icon::before{
+    content: '';
+position: absolute;
+inset: 5px;
+width: 60px;
+  background:var(--bg1);
+  border-radius: 50%;
+ }
+
+.bottom{
+        position: relative; 
+        bottom: 0;
+        width: 100%;
+}
+
+    .imgbx{
             position: relative;
             width: 40px;
             height: 40px;
@@ -121,7 +176,7 @@ text-decoration: none;
             overflow: hidden;
         }
 
-        .imgbx img{
+    .imgbx img{
             position: absolute;
             top: 0;
             left: 0;
@@ -130,7 +185,7 @@ text-decoration: none;
             object-fit: cover;
         }
 
-        .menutoggle{
+    .menutoggle{
             position: absolute;
             top: 20px;
             right: 20px;
@@ -139,12 +194,38 @@ text-decoration: none;
             background: var(--bgt) ;
             z-index: 1000;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-          .menutoggle::before{
+    .menutoggle::before{
             content: "";
              position: absolute;
              width: 20px;
              height: 3px;
              background: var(--bgsb);
+             transform: translateY(-9px);
+             transition: 0.5s;
+             box-shadow: 0 9px var(--bgsb);
           }
+
+    .menutoggle::after{
+            content: "";
+             position: absolute;
+             width: 20px;
+             height: 3px;
+             background: var(--bgsb);
+             transform: translateY(9px);
+             transition: 0.5s;
+          }
+
+    .menutoggle.active::before{
+            transform: translateY(0px) rotate(45deg);
+            box-shadow: 0 0  0 var(--bgsb);
+           
+          }
+    
+   .menutoggle.active::after{
+     transform: translateY(0px) rotate(-45deg);
+   }
