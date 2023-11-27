@@ -160,11 +160,34 @@
  }
 
 /* ------------sección nueva--------- */
-
- .sidebar.active~.content{
-   width: calc(100% - 60px);
-   right: 60px;
+.content{
+   position: relative;
+   width: calc(100% - 80px);
+   left: 80px;
+   transition: all 0.3s ease;
 }
+.sidebar.active~.content{
+   width: calc(100% - 300px);
+   left: 300px;
+}
+
+.content nav{
+   height: 56px;
+  
+   padding: 0 24px 0 0;
+   display: flex;
+   align-items: center;
+   grid-gap: 24px;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+}
+
+
+
+
+
  /* ----------------------------------- */
  .imageBox {
     position: relative;
