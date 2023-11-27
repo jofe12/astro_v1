@@ -158,7 +158,14 @@
  .sidebar ul li:hover.active a .icon::before {
     background: #fff;
  }
- 
+
+/* ------------sección nueva--------- */
+
+ .sidebar.active~.content{
+   width: calc(100% - 60px);
+   right: 60px;
+}
+ /* ----------------------------------- */
  .imageBox {
     position: relative;
     width: 40px;
@@ -219,3 +226,20 @@
  .menuToggle.active::after {
     transform: translateY(0px) rotate(-45deg);
  }
+
+
+
+ /* ---------------------------ensayo------------------------------- */
+
+ .content nav{
+   height: 56px;
+   background: red;
+   padding: 0 24px 0 0;
+   display: flex;
+   align-items: center;
+   grid-gap: 24px;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+}
