@@ -173,7 +173,7 @@
 
 .content nav{
    height: 50px;
-  background: #f1d6b8; ;
+  background: #f1d6b8; 
    padding: 0 24px 0 0;
    display: flex;
    align-items: center;
@@ -184,6 +184,16 @@
    z-index: 1000;
 }
 
+.content nav::before{
+   content: "";
+   position: absolute;
+   width: 40px;
+   height: 40px;
+   bottom: -40px;
+   left: 0;
+   border-radius: 50%;
+   box-shadow: -20px -20px 0 #f1d6b8;
+}
 
 
 
