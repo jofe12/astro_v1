@@ -34,14 +34,14 @@
     width: 80px;
     height: 100%;
     background: #f1d6b8;
-    z-index: 100000;
+    z-index: 10000;
     transition: 0.5s;
     padding-left: 10px;
     overflow: hidden;
  }
  
  .sidebar.active {
-    width: 300px;
+    width: 250px;
  }
  
  .sidebar ul {
@@ -164,16 +164,16 @@
    position: relative;
    width: calc(100% - 80px);
    left: 80px;
-   transition: all 0.3s ease;
+   transition: all 0.5s ease;
 }
 .sidebar.active~.content{
-   width: calc(100% - 300px);
-   left: 300px;
+   width: calc(100% - 250px);
+   left: 250px;
 }
 
 .content nav{
    height: 56px;
-  
+  background: #f1d6b8; ;
    padding: 0 24px 0 0;
    display: flex;
    align-items: center;
@@ -252,17 +252,4 @@
 
 
 
- /* ---------------------------ensayo------------------------------- */
-
- .content nav{
-   height: 56px;
-   background: red;
-   padding: 0 24px 0 0;
-   display: flex;
-   align-items: center;
-   grid-gap: 24px;
-   position: sticky;
-   top: 0;
-   left: 0;
-   z-index: 1000;
-}
+ 
