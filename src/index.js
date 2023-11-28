@@ -1,10 +1,11 @@
 
-let menuToggle = document.querySelector(".menuToggle");
-let sidebar = document.querySelector(".sidebar");
-menuToggle.onclick = function () {
-   menuToggle.classList.toggle("active");
-   sidebar.classList.toggle("active");
-};
+const menuBar = document.querySelector('.content nav .bx.bx-menu');
+const sideBar = document.querySelector('.sidebar');
+
+menuBar.addEventListener('click', () => {
+   sideBar.classList.toggle('active');
+   console.log('hola')
+});
 
 let Menulist = document.querySelectorAll(".Menulist li");
 function activeLink() {
