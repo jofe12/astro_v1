@@ -1,5 +1,6 @@
 
-const menuBar = document.querySelector('.content nav .bx.bx-menu');
+// Activa boton del menu para mostrar ou ocultar menu
+const menuBar = document.querySelector('.Navbar nav .bx.bx-menu');
 const sideBar = document.querySelector('.sidebar');
 
 menuBar.addEventListener('click', () => {
@@ -7,6 +8,7 @@ menuBar.addEventListener('click', () => {
  
 });
 
+//  cambio de colores en sidebar
 let Menulist = document.querySelectorAll(".Menulist li");
 function activeLink() {
    Menulist.forEach((item) => item.classList.remove("active"));

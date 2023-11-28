@@ -182,18 +182,18 @@
  }
 
 /* ------------sección nueva--------- */
-.content{
+.Navbar{
    position: relative;
    width: calc(100% - 80px);
    left: 80px;
    transition: all 0.5s ease;
 }
-.sidebar.active~.content{
+.sidebar.active~.Navbar{
    width: calc(100% - 250px);
    left: 250px;
 }
 
-.content nav{
+.Navbar nav{
    height: 50px;
   background: var(--light);
    padding: 0 24px 0 0;
@@ -206,7 +206,7 @@
    z-index: 1000;
 }
 
-.content nav::before{
+.Navbar nav::before{
    content: "";
    position: absolute;
    width: 40px;
@@ -217,7 +217,7 @@
    box-shadow: -20px -20px 0 var(--light);
 }
 
-.content nav i{
+.Navbar nav i{
    padding: 20px;
    font-size: 30px;
    cursor: pointer;
@@ -226,7 +226,7 @@
   
 }
 
-.content nav .theme-toggle{
+.Navbar nav .theme-toggle{
    display: block;
    left: 91%;
    min-width: 50px;
@@ -237,7 +237,7 @@
    border-radius: 25px;
 }
 
-.content nav .theme-toggle::before{
+.Navbar nav .theme-toggle::before{
    content: "";
    position: absolute;
    top: 2px;
@@ -249,7 +249,7 @@
    transition: all 0.3s ease;
 }
 
-.content nav #theme-toggle:checked+.theme-toggle::before{
+.Navbar nav #theme-toggle:checked+.theme-toggle::before{
    left: calc(100% - (25px - 4px) - 2px);
 }
 
