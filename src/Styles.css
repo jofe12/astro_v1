@@ -1,5 +1,5 @@
 
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -9,11 +9,33 @@
 
 :root {
     --clr: #375c5d;
+    --light: #f1d6b8;
+    --primary: #1976D2;
+    --light-primary: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #363949;
+    --danger: #D32F2F;
+	--light-danger: #FECDD3;
+    --warning: #FBC02D;
+    --light-warning: #FFF2C6;
+    --success: #388E3C;
+    --light-success: #BBF7D0;
+    --black: #333;
  }
- 
+
+
  body {
     background: var(--clr);
+    overflow-x: hidden;
+    
  }
+
+ body.dark{
+   --light: #181a1e;
+   --grey: #25252c;
+   --dark: #fbfbfb
+}
  
  section {
     position: relative;
@@ -33,7 +55,7 @@
     position: fixed;
     width: 80px;
     height: 100%;
-    background: #f1d6b8;
+    background: var(--light);
     z-index: 10000;
     transition: 0.5s;
     padding-left: 10px;
@@ -115,7 +137,7 @@
     padding-left: 10px;
     height: 70px;
     font-size: 1.5em;
-    color: #333;
+    color: var(--black);
     transition: 0.5s;
  }
  
@@ -125,7 +147,7 @@
     display: flex;
     align-items: center;
     font-size: 1em;
-    color: #333;
+    color: var(--black);
     padding-left: 15px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -133,7 +155,7 @@
  }
  
  .sidebar ul li.active a .icon {
-    color: #fff;
+    color: var(--light)
  }
  
  .sidebar ul li.active a .text {
@@ -156,7 +178,7 @@
  }
  
  .sidebar ul li:hover.active a .icon::before {
-    background: #fff;
+    background: var(--light)
  }
 
 /* ------------sección nueva--------- */
@@ -173,7 +195,7 @@
 
 .content nav{
    height: 50px;
-  background: #f1d6b8; 
+  background: var(--light);
    padding: 0 24px 0 0;
    display: flex;
    align-items: center;
@@ -192,13 +214,14 @@
    bottom: -40px;
    left: 0;
    border-radius: 50%;
-   box-shadow: -20px -20px 0 #f1d6b8;
+   box-shadow: -20px -20px 0 var(--light);
 }
 
 .content nav i{
-padding: 20px;
+   padding: 20px;
    font-size: 30px;
    cursor: pointer;
+  
 }
 
 

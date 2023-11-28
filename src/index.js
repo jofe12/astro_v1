@@ -4,7 +4,7 @@ const sideBar = document.querySelector('.sidebar');
 
 menuBar.addEventListener('click', () => {
    sideBar.classList.toggle('active');
-   console.log('hola')
+ 
 });
 
 let Menulist = document.querySelectorAll(".Menulist li");
