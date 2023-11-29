@@ -15,3 +15,15 @@ function activeLink() {
    this.classList.add("active");
 }
 Menulist.forEach((item) => item.addEventListener("click", activeLink));
+
+
+
+const toggler = document.getElementById('theme-toggle');
+
+toggler.addEventListener('change', function () {
+    if (this.checked) {
+        document.body.classList.add('dark');
+    } else {
+        document.body.classList.remove('dark');
+    }
+});
